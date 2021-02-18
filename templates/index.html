@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart disease Prediction</title>
+</head>
+
+<body>
+<div style="color:rgb(113, 113, 150)">
+    <!-- "{{ url_for('predict')}}" -->
+    <form action="\predict" method="post"> 
+        <table align="center">
+        <tr><th><h1>Predictive Sensitivity of Heart disease</h1></th</tr>
+         <tr><td><h3>Age:</h3></td><td><input id="first" name="age" type="text" required="required"></td></tr> 
+         <tr><td><h3>Cholesterol in mg/dl</h3></td><td><input id="chol" name="chol" required="required"></td></tr>
+         <tr><td><h3>Sex (M= 1,F= 0):</h3></td>
+            <td><select name="sex" id="sex" required="required">
+                <option value="Male">Male</option>  
+                <option value="female">female</option>  
+            </select></td></tr>
+            <tr><td> <h3>Exercise-induced angina(N=0, Y=1)</h3></td>
+                <td><select name="exang" id="exang" required="required">
+                    <option value="No">No</option>
+                    <option value="Yes">Yes</option></td>
+            </tr>
+
+            <tr><td><h3>Chest pain type</h3></td>
+                <!-- 1234 -->
+                <td><select name="cp" id="cp" required="required">
+                <option value="typical_angina">typical angina</option>
+                <option value="atypical_angina">atypical angina</option>
+               <option value="non-anginal">non-anginal</option>
+               <option value="asymptomatic">asymptomatic</option>
+            </select></td></tr>
+           
+            <tr><td> <h3>ECG results</h3></td>
+                <!-- 012 -->
+                <td><select name="ecg" id="ecg" required="required">
+            <option value="normal">normal</option>
+            <option value="abnormality">ST-T wave abnormality</option>
+            <option value="hypertrophy">left ventricular hypertrophy</option>
+            </select></td></tr>
+
+            <tr><td> <h3>Slope of the peak</h3></td>
+                <!-- 123 -->
+                <td><select name="slope" id="slope" required="required">
+                <option value="upslope">upslope</option>
+                <option value="flat">flat</option>
+                <option value="down">down slope</option>
+                 </select></td></tr> 
+
+             <tr><td><h3>Major vessels(0 or 1 or 2 or 3)</h3></td>
+                <td><select name="major_vessels" id="major_vessels" required="required">
+                <option value="major_vessels_0">major_vessels_0</option>
+                <option value="major_vessels_1">major_vessels_1</option>
+                <option value="major_vessels_2">major_vessels_2</option>
+                <option value="major_vessels_3">major_vessels_3</option>
+                </select></td></tr>
+
+        <tr><td></td><td><button id="btn-secondary" type="submit">Predict result</button></td></tr>
+        </table>
+         
+        <br><h3 align="center">{{ prediction_texts }}<h3></h3>
+    </form>
+    <!-- <button id="btn-primary" type="submit" href="{{ url_for('Home')}}">check again</button>  -->
+        
+</div>
+<style>
+    #btn-primary{
+       
+        text-align: center;
+        background-color: rgb(127, 125, 145);
+     }
+</style>
+
+
+</body>
+</html>
