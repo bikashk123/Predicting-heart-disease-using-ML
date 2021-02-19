@@ -1,5 +1,5 @@
 # Predicting-heart-disease-using-ML
-Predict heart Disease detection, finds the best precision and sensitivity of the model using various classification algorithms and feature selection method.
+Built a model for heart Disease detection, which finds the best sensitivity and specificity of the model using various classification algorithms and feature selection method. find the best feature which causes hign sensitivity of the model.
 
 
 Demo 
